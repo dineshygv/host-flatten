@@ -1,0 +1,16 @@
+{
+  "name": "hosts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "hosts.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bluebird": "^3.4.7",
+    "hostile": "^1.2.0",
+    "underscore": "^1.8.3"
+  }
+}
