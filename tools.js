@@ -2,6 +2,7 @@ var _ = require("underscore");
 var Promise = require("bluebird");
 var hostile = require("hostile");
 var dns = require("dns");
+var fs = require('fs');
 
 /**
  * Host object format : 
@@ -63,8 +64,13 @@ function getIp(domain) {
     return Promise.promisify(dns.lookup)(domain);
 }
 
+function writeHostToFile(filePath, hostName) {
+    fs.writeFileSync(filePath, "set MACHINE=" + hostName);
+}
+
 module.exports = {
     removeHostsFromList,
     setDomainsFromList,
-    getIp
+    getIp,
+    writeHostToFile
 };
